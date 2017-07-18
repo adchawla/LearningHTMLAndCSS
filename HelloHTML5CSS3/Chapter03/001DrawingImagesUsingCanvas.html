@@ -1,5 +1,16 @@
 <html>
-  <head></head>
+  <head>
+    <script>
+      function draw() {
+        var canvas = document.getElementById('mycanvas');
+        if (canvas.getContext) {
+          var ctx = canvas.getContext('2d');
+          //do stuff
+        }
+      }
+      window.addEventListener("load", draw, false);
+    </script>
+  </head>
   <body>
     <canvas id="mycanvas" width="320" height="240" style="outline: 1px solid #999;">
       Your browser does not support the canvas element.
