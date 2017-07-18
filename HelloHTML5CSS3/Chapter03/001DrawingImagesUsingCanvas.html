@@ -5,14 +5,17 @@
         var canvas = document.getElementById('mycanvas');
         if (canvas.getContext) {
           var ctx = canvas.getContext('2d');
-          ctx.fillStyle = 'rgb(255,0,0)';
-          ctx.fillRect(50,50,100,100);
+          var image = document.getElementById("myimage");
+          ctx.drawImage(image, 10, 10);
         }
       }
       window.addEventListener("load", draw, false);
     </script>
   </head>
   <body>
+    <div style="display:none;">
+      <img id="myimage" src="example.jpg" width="205" height="225" />
+    </div>
     <canvas id="mycanvas" width="320" height="240" style="outline: 1px solid #999;">
       Your browser does not support the canvas element.
     </canvas>
